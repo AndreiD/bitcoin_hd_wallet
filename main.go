@@ -7,28 +7,40 @@ import (
 	"github.com/btcsuite/btcd/chaincfg"
 )
 
-var (
-	mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
-)
+const mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
 
 func main() {
 	master, err := hdwallet.NewKey(
 		hdwallet.Mnemonic(mnemonic),
 		hdwallet.Password("secret password $"), // <---- your secret password here
-		hdwallet.Params(&chaincfg.MainNetParams),
 	)
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println("\n~~~~~~~~~~~ BITCOIN MAINNET ~~~~~~~~~~~")
+	fmt.Printf("\n~~~~~~~~~~~ BITCOIN MAINNET ~~~~~~~~~~~")
 	for i := 0; i < 3; i++ {
-		wallet, _ := master.GetWallet(hdwallet.CoinType(hdwallet.BTC), hdwallet.AddressIndex(uint32(i)), hdwallet.Params(&chaincfg.MainNetParams))
-		legacy, _ := wallet.GetAddress()
-		addressP2WPKH, _ := wallet.GetKey().AddressP2WPKH()
-		addressP2WPKHInP2SH, _ := wallet.GetKey().AddressP2WPKHInP2SH()
+		wallet, err := master.GetWallet(hdwallet.CoinType(hdwallet.BTC), hdwallet.AddressIndex(uint32(i)), hdwallet.Params(&chaincfg.MainNetParams))
+		if err != nil {
+			panic(err)
+		}
+		legacy, err := wallet.GetAddress()
+		if err != nil {
+			panic(err)
+		}
+		addressP2WPKH, err := wallet.GetKey().AddressP2WPKH()
+		if err != nil {
+			panic(err)
+		}
+		addressP2WPKHInP2SH, err := wallet.GetKey().AddressP2WPKHInP2SH()
+		if err != nil {
+			panic(err)
+		}
 
-		wifCompressed, _ := wallet.GetKey().PrivateWIF(true)
+		wifCompressed, err := wallet.GetKey().PrivateWIF(true)
+		if err != nil {
+			panic(err)
+		}
 		fmt.Printf("WIF (compressed): %s\n", wifCompressed)
 		fmt.Printf("Address %s\n", addressP2WPKH)
 		fmt.Printf("Segwit %s\n", addressP2WPKHInP2SH)
@@ -36,23 +48,29 @@ func main() {
 		fmt.Println("------------")
 	}
 
-	master, err = hdwallet.NewKey(
-		hdwallet.Mnemonic(mnemonic),
-		hdwallet.Password("secret password $"),
-		hdwallet.Params(&chaincfg.TestNet3Params),
-	)
-	if err != nil {
-		panic(err)
-	}
-
-	fmt.Println("\n\n~~~~~~~~~~~ BITCOIN TESTNET ~~~~~~~~~~~\n\n")
+	fmt.Printf("\n\n~~~~~~~~~~~ BITCOIN TESTNET ~~~~~~~~~~~\n\n")
 	for i := 0; i < 3; i++ {
-		wallet, _ := master.GetWallet(hdwallet.AddressIndex(uint32(i)), hdwallet.Params(&chaincfg.TestNet3Params))
-		legacy, _ := wallet.GetAddress()
-		addressP2WPKH, _ := wallet.GetKey().AddressP2WPKH()
-		addressP2WPKHInP2SH, _ := wallet.GetKey().AddressP2WPKHInP2SH()
+		wallet, err := master.GetWallet(hdwallet.AddressIndex(uint32(i)), hdwallet.Params(&chaincfg.TestNet3Params))
+		if err != nil {
+			panic(err)
+		}
+		legacy, err := wallet.GetAddress()
+		if err != nil {
+			panic(err)
+		}
+		addressP2WPKH, err := wallet.GetKey().AddressP2WPKH()
+		if err != nil {
+			panic(err)
+		}
+		addressP2WPKHInP2SH, err := wallet.GetKey().AddressP2WPKHInP2SH()
+		if err != nil {
+			panic(err)
+		}
 
-		wifCompressed, _ := wallet.GetKey().PrivateWIF(true)
+		wifCompressed, err := wallet.GetKey().PrivateWIF(true)
+		if err != nil {
+			panic(err)
+		}
 		fmt.Printf("WIF (compressed): %s\n", wifCompressed)
 		fmt.Printf("Address %s\n", addressP2WPKH)
 		fmt.Printf("Segwit %s\n", addressP2WPKHInP2SH)
