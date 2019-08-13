@@ -18,6 +18,11 @@ HD wallets eliminate the need for the user to constantly generate and wait for t
 This repo is continuing the work of https://github.com/foxnut/go-hdwallet
 (actually removing lots of stuff form it and making it work just for bitcoin)
 
+
+### How to use it
+
+- download the files from the hdwallet package, and use it in your code.
+
 ### See main.go file for an example
 
 ~~~~
