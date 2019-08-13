@@ -21,12 +21,16 @@ This repo is continuing the work of https://github.com/foxnut/go-hdwallet
 
 ### How to use it
 
-- download the files from the hdwallet package, and use it in your code.
+- download the files from the hdwallet package, inspect it for hacks, security issues, bad hackers trying to steal your precious bitcoins.
+- use it in your code
+- ???
+- profit!
 
 ### See main.go file for an example
 
 ~~~~
 ~~~~~~~~~~~ BITCOIN MAINNET ~~~~~~~~~~~
+
 WIF (compressed): L4meG9M7FHvd1rVjwbZwJAvd4fHdsweGzC4M1nurDttfRuf1tohW
 Address bc1q4950q3q3cxtlve5yq2rd47ksd2qgr20uv4e5jn
 Segwit 38H9WZNBWVcMNHvt8CzvnmvzFxMm5QZvbn
