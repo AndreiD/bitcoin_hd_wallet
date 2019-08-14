@@ -1,4 +1,4 @@
-package csvstuff
+package csv
 
 // --------- EXAMPLE HOW TO EXPORT 'EM AS CSV
 
@@ -13,8 +13,8 @@ import (
 	"github.com/btcsuite/btcd/chaincfg"
 )
 
-// ExportToCSV ..... does just that
-func ExportToCSV() {
+// ExportBTCToCSV ..... does just that
+func ExportBTCToCSV() {
 
 	file, err := os.Create("btc_testnet.csv")
 	if err != nil {
@@ -37,7 +37,7 @@ func ExportToCSV() {
 
 	defer writer.Flush()
 
-	for i := 0; i <= 5000; i++ {
+	for i := 0; i <= 1000; i++ {
 		wallet, err := master.GetWallet(hdwallet.AddressIndex(uint32(i)), hdwallet.Params(&chaincfg.TestNet3Params))
 		if err != nil {
 			panic(err)
@@ -60,7 +60,7 @@ func ExportToCSV() {
 			panic(err)
 		}
 
-		if i%10000 == 0 {
+		if i%100 == 0 {
 			fmt.Printf("Done %d records\n", i)
 		}
 	}

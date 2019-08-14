@@ -1,4 +1,4 @@
-# Bitcoin HD Wallet Generator
+# Bitcoin / Ethereum HD Wallet Generator
 
 
 ### What Is an HD Wallet?
@@ -26,7 +26,8 @@ This repo is continuing the work of https://github.com/foxnut/go-hdwallet
 - ???
 - profit!
 
-### See main.go file for an example
+### See main.go file for an example.
+### See csv folder for bitcoin/eth to csv files
 
 ~~~~
 ~~~~~~~~~~~ BITCOIN MAINNET ~~~~~~~~~~~
