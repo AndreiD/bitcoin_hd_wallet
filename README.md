@@ -1,9 +1,9 @@
 # Bitcoin / Ethereum HD Wallet Generator
 
 
-### What Is an HD Wallet?
+### :fire: What Is an HD Wallet? :fire:
 
-An HD Wallet, or Hierarchical Deterministic wallet, is a new-age digital wallet that automatically generates a hierarchical tree-like structure of private/public addresses (or keys), thereby addressing the problem of the user having to generate them on their own.
+An HD Wallet (Hierarchical Deterministic wallet), is a new-age digital wallet that automatically generates a hierarchical tree-like structure of private/public addresses (or keys), thereby addressing the problem of the user having to generate them on their own.
 
 
 ### HD Wallet Explained
