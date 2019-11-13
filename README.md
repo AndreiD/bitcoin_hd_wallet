@@ -6,7 +6,7 @@
 An HD Wallet (Hierarchical Deterministic wallet), is a new-age digital wallet that automatically generates a hierarchical tree-like structure of private/public addresses (or keys), thereby addressing the problem of the user having to generate them on their own.
 
 
-### HD Wallet Explained
+### :mushroom: HD Wallet Explained :mushroom:
 A standard cryptocurrency wallet is used to store the cryptocurrency tokens or coins. It has a public address which the user can give to others to receive funds from them, and a private key that the user uses to spend the stored tokens.
 
 This public/private combination mechanism ensures safety of the cryptocurrency tokens but comes with an additional overhead of the user being required to repeatedly generate a random pair of private/public addresses (or keys), and back up each time one configures a new pair of addresses. As the number of transactions increases, this process becomes cumbersome for the user.
@@ -19,7 +19,7 @@ This repo is continuing the work of https://github.com/foxnut/go-hdwallet
 (actually removing lots of stuff form it and making it work just for bitcoin)
 
 
-### How to use it
+### :zap: How to use it :zap:
 
 - download the files from the hdwallet package, inspect it for hacks, security issues, bad hackers trying to steal your precious bitcoins.
 - use it in your code
@@ -70,4 +70,4 @@ Legacy my9ToonRiA3UEZxKdh7YG4Ctdr2ygPU14Z
 ~~~~
 
 
-### License: MIT
+### :monkey: License: MIT :monkey:
