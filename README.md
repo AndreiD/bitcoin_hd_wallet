@@ -1,4 +1,4 @@
-# Bitcoin / Ethereum HD Wallet Generator
+# Bitcoin HD Wallet Generator
 
 
 ### :fire: What Is an HD Wallet? :fire:
@@ -15,8 +15,6 @@ HD Wallets, or Hierarchical Deterministic wallets, solve this problem by derivin
 
 HD wallets eliminate the need for the user to constantly generate and wait for the secure keys to be generated, so they only need to worry about taking the backup.
 
-This repo is continuing the work of https://github.com/foxnut/go-hdwallet
-(actually removing lots of stuff form it and making it work just for bitcoin)
 
 
 ### :zap: How to use it :zap:
